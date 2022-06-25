@@ -1,0 +1,22 @@
+Docker:
+
+The Docker file must exist (Visual Studio can create it)
+
+
+1º Create the image:  docker build --no-cache -f Dockerfile -t image_api .. (in the same place of the docker file)
+2º Run in a Container: docker run --name container_api -p 8000:80 image_api ..
+
+Upload to docker hub, after login:
+
+docker tag image_api username/my_first_api_docker:tagname
+
+
+Login: (prompt)
+docker login -u username
+
+To push:
+
+docker push username/my_first_api_docker:tagname
+
+
+In the tagname you can put any name
